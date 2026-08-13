@@ -12,8 +12,10 @@ cp -avf "/ctx/system_files"/. /
 # List of rpmfusion packages can be found here:
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/43/x86_64/repoview/index.html&protocol=https&redirect=1
 
-# this installs a package from fedora repos
-dnf5 install -y tmux
+# Install Fedora packages
+dnf5 -y install qemu-kvm
+dnf5 -y install libvirt
+dnf5 -y install rocm-opencl
 
 # Use a COPR Example:
 #
@@ -23,5 +25,4 @@ dnf5 install -y tmux
 # dnf5 -y copr disable ublue-os/staging
 
 #### Example for enabling a System Unit File
-
-systemctl enable podman.socket
+# systemctl enable podman.socket
